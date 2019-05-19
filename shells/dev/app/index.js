@@ -9,6 +9,7 @@ import EditableProps from './EditableProps';
 import ElementTypes from './ElementTypes';
 import InspectableElements from './InspectableElements';
 import InteractionTracing from './InteractionTracing';
+import Talk from './Talk';
 import ToDoList from './ToDoList';
 import Toggle from './Toggle';
 import SuspenseTree from './SuspenseTree';
@@ -28,14 +29,15 @@ function mountHelper(App) {
 }
 
 function mountTestApp() {
-  mountHelper(ToDoList);
-  mountHelper(InteractionTracing);
-  mountHelper(InspectableElements);
-  mountHelper(ElementTypes);
-  mountHelper(EditableProps);
-  mountHelper(Toggle);
-  mountHelper(SuspenseTree);
-  mountHelper(DeeplyNestedComponents);
+  mountHelper(Talk);
+  // mountHelper(ToDoList);
+  // mountHelper(InteractionTracing);
+  // mountHelper(InspectableElements);
+  // mountHelper(ElementTypes);
+  // mountHelper(EditableProps);
+  // mountHelper(Toggle);
+  // mountHelper(SuspenseTree);
+  // mountHelper(DeeplyNestedComponents);
 }
 
 function unmountTestApp() {
