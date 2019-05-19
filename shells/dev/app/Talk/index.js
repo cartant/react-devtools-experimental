@@ -1,5 +1,4 @@
-import React, { Suspense } from 'react';
-import { Repos, ReposFallback } from './Repos';
+import { App } from './App';
 
 const { Polly, Timing } = require('@pollyjs/core');
 const Adapter = require('@pollyjs/adapter-fetch');
@@ -26,19 +25,4 @@ polly.configure({
   )(...args)
 });
 
-const App = () => (
-  <div className="App">
-    <Suspense fallback={<ReposFallback />}>
-      <Repos names={[
-        'rxjs-etc',
-        'rxjs-marbles',
-        'rxjs-observe',
-        'rxjs-spy',
-        'rxjs-tslint-rules',
-        'ts-action',
-        'tslint-etc'
-      ]} />
-    </Suspense>
-</div>
-);
 export default App;

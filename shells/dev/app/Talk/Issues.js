@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { get } from './cache';
 import { Issue } from './Issue';
+import styles from './App.css';
 
 export const Issues = ({ repo }) => {
   const [expanded, setExpanded] = useState(false);
@@ -8,16 +9,16 @@ export const Issues = ({ repo }) => {
     `https://api.github.com/repos/cartant/${repo.name}/issues?state=open`
   );
   return (
-    <div className="Issues">
+    <div className={styles.Issues}>
       <p>
-        <span className="Issues-button" onClick={() => setExpanded(!expanded)}>
+        <span className={styles.IssuesButton} onClick={() => setExpanded(!expanded)}>
           {
             issues.length
               ? expanded ? '\u2796' : '\u2795'
               : '\u2705'
           }
         </span>
-        <span className="Issues-count">
+        <span className={styles.IssuesCount}>
           {
             issues.length === 1
               ? `1 open issue`
@@ -35,5 +36,5 @@ export const Issues = ({ repo }) => {
 };
 
 export const IssuesFallback = () => (
-  <p className="IssuesFallback">Loading issues...</p>
+  <p className={styles.IssuesFallback}>Loading issues...</p>
 );
