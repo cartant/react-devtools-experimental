@@ -14,8 +14,8 @@ export const Issues = ({ repo }) => {
         <span className={styles.IssuesButton} onClick={() => setExpanded(!expanded)}>
           {
             issues.length
-              ? expanded ? '\u2796' : '\u2795'
-              : '\u2705'
+              ? expanded ? '\u{2796}' : '\u{2795}'
+              : '\u{1F389}'
           }
         </span>
         <span className={styles.IssuesCount}>
